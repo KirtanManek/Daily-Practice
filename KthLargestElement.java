@@ -13,13 +13,13 @@ public class KthLargestElement {
                 .toList();
         System.out.print("Enter the value of k : ");
         int k = Integer.parseInt(bufferedReader.readLine());
-        KthLargestElement kthLargestElement = new KthLargestElement();
-        System.out.println(kthLargestElement.findKthLargest(h, k));
+        System.out.println(findKthLargest(h, k));
     }
-    int findKthLargest(List<Integer> nums, int k) {
+    static int findKthLargest(List<Integer> nums, int k) {
         Set<Integer> set = new LinkedHashSet<>(nums);
         ArrayList<Integer> list = new ArrayList<>(set);
         Collections.sort(list);
         return list.get(list.size() - k);
+
     }
 }
